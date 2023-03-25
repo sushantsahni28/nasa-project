@@ -1,10 +1,12 @@
 const request = require('supertest')
 const app = require('../../app')
 const { startMongo } = require('../../services/mongo');
+const { loadAllPlanets } = require('../../models/planets.model')
 
 describe('NASA API',() =>{
     beforeAll( async () => {
         await startMongo();
+        await loadAllPlanets();
     });
     describe('Test GET /launches',() =>{
         test('should respond by 200',async () => {
