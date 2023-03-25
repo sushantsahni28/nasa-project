@@ -1,4 +1,3 @@
-import React, {useEffect} from 'react';
 import { Footer as ArwesFooter, Paragraph } from "arwes";
 import Centered from "./Centered";
 
